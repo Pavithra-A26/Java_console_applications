@@ -35,4 +35,15 @@ public class StudentDataBase {
         }
         return  false;
     }
+
+    public Student getStudentById(int id){
+        Student student = null;
+        for(Student std :students){
+            if(std.getId() == id){
+                student= std;
+            }
+        }
+
+        return student;
+    }
 }

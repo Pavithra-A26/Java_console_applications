@@ -14,5 +14,11 @@ public class StudentViewModel {
         db.addStudent(new Student(name , id));
     }
 
-    public boolean deleteStudent
+    public boolean deleteStudent(int sid){
+        return  db.deleteStudent(sid);
+    }
+
+    public Student searchStudent(int id){
+        return db.getStudentById(id);
+    }
 }
