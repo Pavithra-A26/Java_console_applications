@@ -13,7 +13,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         while(true){
-            view.showMsg("1.add student \n 2.display student \n 3.exit");
+            view.showMsg("1.add student \n 2.display student \n 3.Show Student by id  \n 4.Delete Student \n 5.1exit");
             int choice = sc.nextInt();
             sc.nextLine();
 
@@ -36,6 +36,19 @@ public class Main {
                     break;
 
                 case 3:
+                    view.showMsg("Enter the student id to delete");
+                    int sid = sc.nextInt();
+                    view.displayStudents(vm.searchStudent(sid));
+                    break;
+
+                case 4:
+                    view.showMsg("Enter the student id to delete");
+                    int did = sc.nextInt();
+                    vm.deleteStudent(did);
+                    view.showMsg("Student deleted");
+                    break;
+
+                case 5:
                     System.exit(0);
             }
         }
